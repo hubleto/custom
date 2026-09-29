@@ -7,18 +7,18 @@ ini_set('error_append_string', "</pre>");
 ini_set('display_errors', 1);
 ini_set('error_reporting', E_ALL ^ E_NOTICE ^ E_WARNING);
 
-// load configs
+// env config
+$config = [];
 require_once(__DIR__ . "/ConfigEnv.php");
 
-// load autoloaders
+// autoloaders
 require(($config['releaseFolder'] ?? '.') . "/vendor/autoload.php");
-
-if (is_array($config['appRepositories']) && count($config['appRepositories']) > 0) {
-    foreach ($config['appRepositories'] as $appRepository) {
-        if (is_dir($appRepository)) {
-            require($appRepository . '/autoload.php');
-        }
+if (is_array($config['appRepositories'])) {
+  foreach ($config['appRepositories'] as $appRepository) {
+    if (is_dir($appRepository)) {
+      require($appRepository . '/autoload.php');
     }
+  }
 }
 
 // init main class
