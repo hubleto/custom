@@ -2,23 +2,14 @@
 
 Free, customizable and self-hosted CRM/ERP.
 
-## Install stable version
+## Installation
 
-To install stable Hubleto, create an empty project folder and run following commands in the folder:
-
-```
-composer create-project hubleto/erp-project . --prefer-stable
-php hubleto init
-```
-
-## Install development version
-
-To install development version, create an empty project folder and run following commands in the folder:
-
-```
-composer create-project hubleto/erp-project .
-php hubleto init
-```
+1. Create empty folder.
+2. Run one of the following commands based on which version you want to install:
+  * `composer create-project hubleto/erp-project . --stability=dev` for latest development version
+  * `composer create-project hubleto/erp-project . --stability=alpha` for alpha testing version
+  * `composer create-project hubleto/erp-project . --stability=stable` for stable version
+3. Run `php hubleto init` to initialize Hubleto.
 
 ## Custom apps
 
