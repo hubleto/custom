@@ -56,7 +56,7 @@ Shall be located in `APP_ROOT/Models/Migrations/<ModelName>_0001.php` and shall 
 
 ## Directory structure
 
-- `PROJECT_FOLDER/`: Folder created by running `composer create-project hubleto/erp-project .`
+- `PROJECT_FOLDER/`: Folder created by running `composer create-project hubleto/custom .`
   - `src/`: Core application logic
     - `src/apps/`: Custom apps for this project
       - `src/apps/MyCustomApp/Components/`: Hubleto React UI components for tables and forms (e.g. FormContact.tsx and TableContacts.tsx)
@@ -75,7 +75,7 @@ Shall be located in `APP_ROOT/Models/Migrations/<ModelName>_0001.php` and shall 
 - **Database:** SQL (accesesed via Record Managers)
 
 ## Commands
-- **Create initial project files and folder structure:** `composer create-project hubleto/erp-project .`
+- **Create initial project files and folder structure:** `composer create-project hubleto/custom .`
 - **Create new custom app named `MyCustomApp`**: `php hubleto create app MyCustomApp`
 
 ## Description of the app

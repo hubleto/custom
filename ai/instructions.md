@@ -31,7 +31,7 @@ Source code is documented at https://developer.hubleto.eu/source-code.
 Installation is done by running following commands:
 
 ```
-composer create-project hubleto/erp-project .
+composer create-project hubleto/custom .
 php hubleto init
 ```
 
@@ -42,7 +42,7 @@ More details are in README.md.
 
 During the installation, following folder structure created:
 
-- `PROJECT_FOLDER/`: Folder created by running `composer create-project hubleto/erp-project .`
+- `PROJECT_FOLDER/`: Folder created by running `composer create-project hubleto/custom .`
   - `src/`: Core application logic
     - `src/apps/`: Custom apps for this project
       - `src/apps/MyCustomApp/Components/`: Hubleto React UI components for tables and forms (e.g. FormContact.tsx and TableContacts.tsx)
