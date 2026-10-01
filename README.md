@@ -2,13 +2,23 @@
 
 Free, customizable and self-hosted CRM/ERP.
 
-## Install
+## Install stable version
 
-To install production-ready Hubleto, follow these steps:
+To install stable Hubleto, create an empty project folder and run following commands in the folder:
 
-  1. Create an empty project folder: `mkdir /var/www/html/hubleto`
-  2. Download Hubleto via composer: `composer create-project hubleto/erp-project /var/www/html/hubleto --no-dev`
-  3. Initialize Hubleto: `php hubleto init`
+```
+composer create-project hubleto/erp-project . --prefer-stable
+php hubleto init
+```
+
+## Install development version
+
+To install development version, create an empty project folder and run following commands in the folder:
+
+```
+composer create-project hubleto/erp-project .
+php hubleto init
+```
 
 ## Custom apps
 

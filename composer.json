@@ -1,8 +1,7 @@
 {
     "name": "hubleto/erp-project",
-    "version": "2.0.0.alpha1",
-    "license": "AGPL-3.0-or-later",
-    "description": "Production-ready Hubleto ERP.",
+    "license": "MIT",
+    "description": "Custom Hubleto project.",
     "homepage": "https://www.hubleto.eu",
     "support": {
         "issues": "https://github.com/hubleto/erp/issues",
@@ -10,9 +9,9 @@
     },
     "keywords": ["hubleto", "crm", "erp", "application", "hub"],
     "require": {
-        "hubleto/framework": "2.0.0.alpha1",
-        "hubleto/erp": "2.0.0.alpha1",
-        "hubleto/assets": "2.0.0.alpha1",
+        "hubleto/framework": "*",
+        "hubleto/erp": "*",
+        "hubleto/assets": "*",
 
         "hubleto/pay-by-square-encoder": "^1",
         "defuse/php-encryption": "^2",
