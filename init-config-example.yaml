@@ -18,7 +18,7 @@ adminFamilyName: Hubleto
 adminNick: admin
 adminEmail: erp@mycompany.example.com
 adminPassword: erp
-packagesToInstall: crm,marketing,sales,retail,e-commerce,finance
+packagesToInstall: crm,marketing,sales,retail,e-commerce,finance,help,maintenance
 
 ### Miscellaneous
 generateDemoData: false
