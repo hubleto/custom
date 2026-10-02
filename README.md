@@ -1,6 +1,6 @@
 # Hubleto
 
-Free, customizable and self-hosted CRM/ERP. `Vibe-coding ready.`
+Free, customizable and self-hosted CRM/ERP. `Vibe-coding ready`
 
 ## Installation
 
