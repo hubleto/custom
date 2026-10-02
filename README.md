@@ -29,11 +29,11 @@ To install enterprise apps, run `composer require hubleto/enterprise` in the pro
 
 To install any external app, run `composer require app-vendor/app-name`. For example to install the `hubleto-linkedin-messages` from `wai-blue`, run `composer require wai-blue/hubleto-linkedin-messages`.
 
-## Custom apps
+## Custom apps `vibe-coding ready`
 
 To customize your Hubleto, you need to create `custom` apps. There are two ways to speed it up:
 
-  * `recommended` **Vibe-code** with the help of use AI agents. Check out [AI agent instructions](ai/instructions.md) or use [this prompt for constraining the agent](https://developer.hubleto.eu/v2/prompts/app-creation-constraints).
+  * `RECOMMENDED` **Vibe-code** with the help of use AI agents. Check out [AI agent instructions](ai/instructions.md) or use [this prompt for constraining the agent](https://developer.hubleto.eu/v2/prompts/app-creation-constraints).
   * Use `php hubleto create` CLI tool:
     * Create app's scaffolding: `php hubleto create app CarRental`
     * Create the model: `php hubleto create model CarRental Car`
