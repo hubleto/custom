@@ -14,5 +14,9 @@ rem hubleto/enterprise
 call composer config repositories.hubleto/enterprise path %1\enterprise
 call composer require hubleto/enterprise dev-main
 
+rem hubleto/reacct-ui
+call composer config repositories.hubleto/reacct-ui path %1\reacct-ui
+call composer require hubleto/reacct-ui dev-main
+
 rem hubleto/react-ui
 call npm install file:%1\react-ui

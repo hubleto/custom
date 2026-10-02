@@ -11,22 +11,51 @@ const __dirname = path.dirname(__filename);
 function findHubletoAppsInRepository(folder) {
   let apps = [];
   if (fs.existsSync(folder) && fs.lstatSync(folder).isDirectory()) {
-    fs.readdirSync(folder).forEach(function(app){
+    fs.readdirSync(folder).forEach(function(app) {
       const stat = fs.statSync(folder + '/' + app);
+      const manifestFile = folder + '/' + app + '/manifest.yaml';
       const loaderEntry = folder + '/' + app + '/Loader';
-      if (stat && stat.isDirectory() && fs.existsSync(loaderEntry + '.tsx')) {
+
+      if (
+        stat
+        && stat.isDirectory()
+        && fs.existsSync(manifestFile)
+        && fs.existsSync(loaderEntry + '.tsx')
+      ) {
         apps.push(loaderEntry);
       }
     });
   }
 
-  console.log('Found ' + apps.length + ' apps in `' + folder + '`');
-
   return apps;
 }
 
-const communityApps = findHubletoAppsInRepository(path.resolve(__dirname, 'vendor/hubleto/erp/apps'))
-const customApps = findHubletoAppsInRepository(path.resolve(__dirname, 'src/apps'))
+let communityApps = findHubletoAppsInRepository(path.resolve(__dirname, 'vendor/hubleto/erp/apps'))
+let customApps = findHubletoAppsInRepository(path.resolve(__dirname, 'src/apps'))
+
+let externalApps = [];
+
+const vendorFolder = path.resolve(__dirname, 'vendor');
+if (fs.existsSync(vendorFolder) && fs.lstatSync(vendorFolder).isDirectory()) {
+  fs.readdirSync(vendorFolder).forEach(function(vendor) {
+    if (vendor === 'hubleto') return;
+
+    const vendorVendorFolder = path.resolve(vendorFolder, vendor);
+
+    if (fs.existsSync(vendorVendorFolder) && fs.lstatSync(vendorVendorFolder).isDirectory()) {
+      fs.readdirSync(vendorVendorFolder).forEach(function(app) {
+        externalApps = [
+          ...externalApps,
+          ...findHubletoAppsInRepository(path.resolve(vendorFolder, vendor, app))
+        ];
+      });
+    }
+  });
+}
+
+console.log('Found ' + communityApps.length + ' community apps.');
+console.log('Found ' + customApps.length + ' custom apps.');
+console.log('Found ' + externalApps.length + ' external apps.');
 
 export default {
   entry: {

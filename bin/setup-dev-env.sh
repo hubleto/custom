@@ -14,4 +14,7 @@ composer require hubleto/assets:dev-main
 composer config repositories.hubleto/enterprise path "$BASE_DIR/enterprise"
 composer require hubleto/enterprise:dev-main
 
+composer config repositories.hubleto/react-ui path "$BASE_DIR/react-ui"
+composer require hubleto/react-ui:dev-main
+
 npm install "file:$BASE_DIR/react-ui"
