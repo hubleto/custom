@@ -12,6 +12,7 @@
         "hubleto/framework": "*",
         "hubleto/erp": "*",
         "hubleto/assets": "*",
+        "hubleto/react-ui": "*",
 
         "hubleto/pay-by-square-encoder": "^1",
         "defuse/php-encryption": "^2",

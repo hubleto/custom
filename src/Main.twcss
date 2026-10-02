@@ -1,0 +1,24 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@config "../tailwind.config.js";
+
+@layer theme, base, hubleto-desktop, hubleto-components, utilities;
+
+@import "tailwindcss";
+@import "../css/desktop.twcss";
+@import "../css/components.twcss";
+
+@theme {
+  --font-sans: 'Gabarito', 'sans-serif';
+  --font-serif: 'Merriweather', 'serif';
+
+  --color-primary: #4780bf;
+  --color-secondary: #41c50d;
+
+  --spacing-8xl: 96rem;
+  --spacing-9xl: 128rem;
+
+  --radius-4xl: 2rem;
+
+  --nav-height: 3rem;
+}

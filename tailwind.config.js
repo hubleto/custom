@@ -2,8 +2,10 @@
 module.exports = {
   darkMode: 'selector',
   content: [
-    "./vendor/hubleto/erp/**/*.{html,js,twig,tsx}",
-    "./vendor/hubleto/framework/**/*.{tsx,twig}",
+    "../erp/**/*.{html,js,twig,tsx,php}",
+    "../enterprise/**/*.{html,js,twig,tsx,php}",
+    "../framework/**/*.{tsx,twig,php}",
+    "../react-ui/css/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
     'hubleto-lookup__indicator',
