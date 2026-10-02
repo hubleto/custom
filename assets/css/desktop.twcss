@@ -28,7 +28,7 @@
   h1 { @apply mt-4 text-primary text-2xl; }
   h2 { @apply mb-2 text-primary text-xl; }
   table tr { @apply odd:bg-slate-50; }
-  table tr td { @apply p-1; } */
+  table tr td { @apply p-1; }
   code { @apply bg-slate-100 p-1; }
   input, textarea, select { @apply border border-slate-200 flex flex-1 rounded-sm w-full p-0.5 dark:border-slate-500; }
 
@@ -213,14 +213,12 @@
     }
   }
 
-  /* .app-alerts { @apply hidden bg-red-50 text-red-100 p-4; } */
   .app-alerts {
     @apply cursor-default hidden mt-1 z-9999999 shadow-2xl
     border border-red-200
     bg-red-50 text-red-800 p-4
     fixed left-[10vw] top-[10vh] w-[80vw]
     md:left-[25vw] md:w-[50vw]
-    /*md:absolute md:left-[0px] md:top-[110%]*/
     dark:bg-slate-700
   }
 

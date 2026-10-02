@@ -122,13 +122,11 @@
 
     input { @apply w-full }
 
-    /* &.readonly { @apply opacity-50; } */
     &.x-changed { @apply after:content-['✎'] after:text-gray-300 after:ml-2; }
     &.invalid { @apply !border-red-500 text-red-500; }
 
     .inner {
       @apply flex w-full items-center rounded gap-1 min-w-0;
-      /* &.fc { @apply border-r border-r-primary border-r-2; } */
       .value-element { @apply inline-flex flex-1 items-center pr-1 mr-1 dark:text-white; min-height: 1.5rem; }
       .input-element { @apply flex-1 flex flex-row gap-1 items-center dark:text-white min-w-0; min-height: 1.5rem; }
       .value-element .no-value { @apply text-gray-300 italic after:content-['N/A']; }
@@ -292,7 +290,6 @@
     border border-primary/30
     fixed left-[10vw] top-[10vh] w-[80vw]
     md:left-[25vw] md:w-[50vw]
-    /*md:absolute md:left-[0px] md:top-[110%]*/
     dark:bg-slate-700
   }
   .btn.btn-dropdown > .menu > .list { @apply divide-none bg-white dark:bg-slate-700 rounded; }
@@ -481,12 +478,5 @@
   [id^="react-select-"][id*="-option"] {@apply dark:!bg-slate-800 dark:!text-white;}
   [id^="react-select-"][id*="-option"][aria-selected="true"] {@apply dark:!bg-primary;}
   [id^="react-select-"][id*="-option"]:hover {@apply dark:!bg-slate-600;}
-
-
-
-
-  /* main table responsiveness */
-  /* #app-main-content > * > .hubleto.component.table .table-body thead th:nth-child(n+4) { @apply hidden md:table-cell; } */
-  /* #app-main-content > * > .hubleto.component.table .table-body tbody tr td:nth-child(n+4) { @apply hidden md:table-cell;} */
 
 }
