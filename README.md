@@ -29,7 +29,7 @@ To customize your Hubleto, you need to create `custom` apps. There are two ways 
 
 Check out [AI agent instructions](ai/instructions.md) or use [this prompt for constraining the agent](https://developer.hubleto.eu/v2/prompts/app-creation-constraints).
 
-### `php hubleto create`
+### CLI tool
 
   1. Create app's scaffolding: `php hubleto create app CarRental`
   2. Create the model: `php hubleto create model CarRental Car`
