@@ -89,12 +89,6 @@ export default {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        // svgGroup: {
-        //   test(module) {
-        //     console.log(path.dirname(module.resource));
-        //     return false;
-        //   },
-        // },
         community_apps: {
           test: /[\\/]erp[\\/]apps[\\/]/,
           name: 'community-apps',
