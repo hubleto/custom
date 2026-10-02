@@ -51,15 +51,10 @@ Check out [AI agent instructions](ai/instructions.md) or use [this prompt for co
 If you want to contribute to Hubleto core, follow these steps to setup your development environment:
 
   1. Create folder for Hubleto codebase, e.g. `mkdir /var/www/html/hubleto-core`
-  2. Fork [`hubleto/erp`](https://github.com/hubleto/erp), [`hubleto/framework`](https://github.com/hubleto/framework), [`hubleto/assets`](https://github.com/hubleto/assets), [`hubleto/react-ui`](https://github.com/hubleto/react-ui) into `hubleto-core` folder.
-     *Note: If you have access to repository with enterprise apps, you may fork this as well.*
-  4. Symlink these forks by running following commands: `cd /var/www/html/hubleto` + `./bin/setup-dev-env.sh ../hubleto-core`
-     *Note: the `setup-dev-env.sh` takes one argument - relative path to your Hubleto codebase*
+  2. Fork [`hubleto/erp`](https://github.com/hubleto/erp), [`hubleto/framework`](https://github.com/hubleto/framework), [`hubleto/assets`](https://github.com/hubleto/assets), [`hubleto/react-ui`](https://github.com/hubleto/react-ui) into this folder.
+  4. Symlink these forks: `cd /var/www/html/hubleto` + `./bin/setup-dev-env.sh ../hubleto-core`
+  5. Rebuild assets: `npm install & npm run build`
   5. Initialize Hubleto: `php hubleto init`
-
-Now, your `http://localhost/hubleto` will be rendered using the codebase in `hubleto-core`.
-
-> TIP: Use `npm run watch` to automatically compile assets on every change in the UI.
 
 ## Support us
 
