@@ -35,20 +35,6 @@ Check out [AI agent instructions](ai/instructions.md) or use [this prompt for co
   2. Create the model: `php hubleto create model CarRental Car`
   3. Create basic UI: `php hubleto create mvc CarRental Car`
 
-❤️ Give us a star it if you like Hubleto. Thank you. ❤️
-
-## Custom React UI components
-
-We recommend you to use free [Hubleto React UI](https://github.com/hubleto/react-ui) library to develop rich data management features into your apps.
-
-Run commands below to install it:
-
-```
-cd /var/www/html/hubleto
-./bin/prepare-assets.sh
-npm run build
-```
-
 ## Contribute
 
 If you want to contribute to Hubleto core, follow these steps to setup your development environment:
