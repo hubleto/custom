@@ -33,18 +33,11 @@ To install any external app, run `composer require app-vendor/app-name`. For exa
 
 To customize your Hubleto, you need to create `custom` apps. There are two ways to speed it up:
 
-  * vibe-code with the help of use AI agents, or
-  * by using `php hubleto create` CLI tool.
-
-### Vibecoding
-
-Check out [AI agent instructions](ai/instructions.md) or use [this prompt for constraining the agent](https://developer.hubleto.eu/v2/prompts/app-creation-constraints).
-
-### CLI tool
-
-  1. Create app's scaffolding: `php hubleto create app CarRental`
-  2. Create the model: `php hubleto create model CarRental Car`
-  3. Create basic UI: `php hubleto create mvc CarRental Car`
+  * `recommended` **Vibe-code** with the help of use AI agents. Check out [AI agent instructions](ai/instructions.md) or use [this prompt for constraining the agent](https://developer.hubleto.eu/v2/prompts/app-creation-constraints).
+  * Use `php hubleto create` CLI tool:
+    * Create app's scaffolding: `php hubleto create app CarRental`
+    * Create the model: `php hubleto create model CarRental Car`
+    * Create basic UI: `php hubleto create mvc CarRental Car`
 
 ## Contribute
 
