@@ -10,10 +10,9 @@
     "jsx": "react-jsx",
     "preserveSymlinks": true,
     "paths": {
-      "@hubleto/react-ui/*": ["../react-ui/*"],
-      "*": ["../react-ui/node_modules/*"],
+      "@hubleto/react-ui/*": ["./vendor/hubleto/react-ui/*"],
     },
     "lib": ["es2022", "dom", "dom.iterable"],
   },
-  "include": ["./**/*"]
+  "include": ["./vendor/hubleto/**/*"]
 }
