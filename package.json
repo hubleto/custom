@@ -13,7 +13,7 @@
     "@babel/preset-typescript": "^8",
     "@babel/runtime": "^8",
     "@fullcalendar/react": "^7.0",
-    "@hubleto/react-ui": "file:../react-ui",
+    "@hubleto/react-ui": "file:./vendor/hubleto/react-ui",
     "@reduxjs/toolkit": "^2.8.2",
     "@types/jest": "^30.0",
     "@types/jquery": "^4.0",
