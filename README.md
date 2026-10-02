@@ -4,24 +4,36 @@ Free, customizable and self-hosted CRM/ERP.
 
 ## Installation
 
-1. Create empty folder.
-2. Run one of the following commands based on which version you want to install:
-  * `composer create-project hubleto/custom . --stability=dev` for latest development version
-  * `composer create-project hubleto/custom . --stability=alpha` for alpha testing version
-  * `composer create-project hubleto/custom . --stability=stable` for stable version
-3. Run `php hubleto init` to initialize Hubleto.
+```
+composer create-project hubleto/custom . --stability=YOUR_PREFERRED_STABILITY
+npm install & npm run build
+php hubleto init
+```
+
+where `YOUR_PREFERRED_STABILITY` can be:
+  * `dev` for latest development version
+  * `alpha` for alpha testing version
+  * `stable` for stable version
+
+> TIP: Visit https://developer.hubleto.eu for more details.
+
 
 ## Custom apps
 
-To customize your Hubleto, create your `custom` apps:
+To customize your Hubleto, you need to create `custom` apps. There are two ways to speed it up:
+
+  * vibe-code with the help of use AI agents, or
+  * by using `php hubleto create` CLI tool.
+
+### Vibecoding
+
+Check out [AI agent instructions](ai/instructions.md) or use [this prompt for constraining the agent](https://developer.hubleto.eu/v2/prompts/app-creation-constraints).
+
+### `php hubleto create`
 
   1. Create app's scaffolding: `php hubleto create app CarRental`
   2. Create the model: `php hubleto create model CarRental Car`
   3. Create basic UI: `php hubleto create mvc CarRental Car`
-
-> TIP: Check out `ai/instructions.md` instructions for better vibe-coding experience or instruct your agent to study this.
-
-> TIP: Visit https://developer.hubleto.eu for more details on how to develop custom Hubleto apps.
 
 ❤️ Give us a star it if you like Hubleto. Thank you. ❤️
 
@@ -58,13 +70,11 @@ Hubleto is a community project and so it needs your help. We provide complete Hu
 
 We will be very happy to get in touch with any company or individuals, willing to act as reseller or consultant.
 
-Do not hesitate and contact us via [LinkedIn](https://www.linkedin.com/company/hubleto) or [Reddit](https://www.reddit.com/r/hubleto).
+Contact us on [Discord](https://discord.gg/DjtzK4WYYg), [LinkedIn](https://www.linkedin.com/company/hubleto) or [Reddit](https://www.reddit.com/r/hubleto).
 
 ## See also
 
-  * https://github.com/hubleto/erp - the 'main' repository for Hubleto
+  * https://github.com/hubleto - Hubleto source code
   * https://developer.hubleto.eu - developer guide for Hubleto
   * https://help.hubleto.eu - user guide for Hubleto
   * https://www.hubleto.eu - a presentation website
-  * https://community.hubleto.eu - a discussion forum about everything related to Hubleto
-  * https://www.hubleto.eu/demo - try demo
