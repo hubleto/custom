@@ -109,16 +109,16 @@ export default {
           name: 'react-ui',
           chunks: 'all'
         },
+        external_apps: {
+          test: /[\\/]vendor[\\/]/,
+          name: 'external-apps',
+          chunks: 'all'
+        },
         modules: {
           test: /[\\/]node_modules[\\/]/,
           name: 'modules',
           chunks: 'all'
-        },
-        misc: {
-          test: /[\\/]misc[\\/]/,
-          name: 'misc',
-          chunks: 'all'
-        },
+        }
       }
     },
   },
