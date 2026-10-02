@@ -17,6 +17,17 @@ where `YOUR_PREFERRED_STABILITY` can be:
 
 > TIP: Visit https://developer.hubleto.eu for more details.
 
+## Community apps
+
+Community apps are always included.
+
+## Enterprise apps
+
+To install enterprise apps, run `composer require hubleto/enterprise` in the project's folder. If you do not have access to this repository, ask to be a **partner**.
+
+## External apps
+
+To install any external app, run `composer require app-vendor/app-name`. For example to install the `hubleto-linkedin-messages` from `wai-blue`, run `composer require wai-blue/hubleto-linkedin-messages`.
 
 ## Custom apps
 

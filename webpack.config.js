@@ -31,6 +31,7 @@ function findHubletoAppsInRepository(folder) {
 }
 
 let communityApps = findHubletoAppsInRepository(path.resolve(__dirname, 'vendor/hubleto/erp/apps'))
+let enterpriseApps = findHubletoAppsInRepository(path.resolve(__dirname, 'vendor/hubleto/enterprise/apps'))
 let customApps = findHubletoAppsInRepository(path.resolve(__dirname, 'src/apps'))
 
 let externalApps = [];
@@ -54,14 +55,17 @@ if (fs.existsSync(vendorFolder) && fs.lstatSync(vendorFolder).isDirectory()) {
 }
 
 console.log('Found ' + communityApps.length + ' community apps.');
-console.log('Found ' + customApps.length + ' custom apps.');
+console.log('Found ' + enterpriseApps.length + ' enterprise apps.');
 console.log('Found ' + externalApps.length + ' external apps.');
+console.log('Found ' + customApps.length + ' custom apps.');
 
 export default {
   entry: {
     main: [
       './src/Main',
       ...communityApps,
+      ...enterpriseApps,
+      ...externalApps,
       ...customApps
     ],
   },
@@ -85,32 +89,53 @@ export default {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        apps: {
-          test: /[\\/]apps[\\/]/,
-          name: 'apps',
+        // svgGroup: {
+        //   test(module) {
+        //     console.log(path.dirname(module.resource));
+        //     return false;
+        //   },
+        // },
+        community_apps: {
+          test: /[\\/]erp[\\/]apps[\\/]/,
+          name: 'community-apps',
           chunks: 'all'
         },
-        react_ui_core: {
+        enterprise_apps: {
+          test: /[\\/]enterprise[\\/]apps[\\/]/,
+          name: 'enterprise-apps',
+          chunks: 'all'
+        },
+        custom_apps: {
+          test: /[\\/]src[\\/]apps[\\/]/,
+          name: 'custom-apps',
+          chunks: 'all'
+        },
+        react_ui: {
           test: /[\\/]react-ui[\\/]/,
           name: 'react-ui',
           chunks: 'all'
         },
-        react_ui_vendor: {
+        modules: {
           test: /[\\/]node_modules[\\/]/,
           name: 'modules',
+          chunks: 'all'
+        },
+        misc: {
+          test: /[\\/]misc[\\/]/,
+          name: 'misc',
           chunks: 'all'
         },
       }
     },
   },
   resolve: {
-    // modules: [
-    //   path.resolve(__dirname, './node_modules'),
-    // ],
+    modules: [
+      path.resolve(__dirname, './node_modules'),
+    ],
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css'],
     alias: {
       '@babel/runtime': path.resolve(__dirname, 'node_modules/@babel/runtime'),
-      // '@hubleto/react-ui': path.resolve(__dirname, 'vendor/hubleto/react-ui'),
+      '@hubleto/react-ui': path.resolve(__dirname, 'node_modules/@hubleto/react-ui'),
       '@hubleto/apps': path.resolve(__dirname, 'vendor/hubleto/erp/apps'),
     },
   }
