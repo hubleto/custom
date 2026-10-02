@@ -37,7 +37,7 @@ export default {
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'compiled/js'),
+    path: path.resolve(__dirname, 'assets/compiled/js'),
     filename: '[name].js',
     clean: true
   },

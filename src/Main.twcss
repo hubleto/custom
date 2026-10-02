@@ -5,8 +5,8 @@
 @layer theme, base, hubleto-desktop, hubleto-components, utilities;
 
 @import "tailwindcss";
-@import "../css/desktop.twcss";
-@import "../css/components.twcss";
+@import "../vendor/hubleto/assets/css/desktop.twcss";
+@import "../vendor/hubleto/assets/css/components.twcss";
 
 @theme {
   --font-sans: 'Gabarito', 'sans-serif';
